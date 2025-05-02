@@ -43,7 +43,16 @@
           <label for="expires_on_field">Expires on</label>
           <input type="date" id="expires_on_field" name="expires_on"></input>
           </div>
+
+        <div>
+          <label for="board_id_field">Board ID</label>
+          <input type="text" id="board_id_field" name="expires_on"></input>
+          </div>
       </div>
+       <input type="hidden" id="board_id_box" name="query_board_id" value="<%= @the_board.id %>">
+    <button>
+        Add post
+      </button>
 
     </form>
     <dt>
@@ -60,6 +69,7 @@
       <%= time_ago_in_words(@the_board.updated_at) %> ago
     </dd>
   </dl>
+  
 </div>
 </div>
 
@@ -83,6 +93,7 @@
       <button>
         Update board
       </button>
+      
     </form>
   </div>
 </div>
