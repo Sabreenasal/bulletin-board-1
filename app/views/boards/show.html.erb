@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Board #<%= @the_board.id %> details
+      <%= @the_board.name %>
     </h1>
 
     <div>
@@ -25,26 +25,45 @@
       <dd>
         <%= @the_board.name %>
       </dd>
+      <hr>
 
-      <dt>
-        Created at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_board.created_at) %> ago
-      </dd>
+      <h2>Add a new post</h2>
+      <form action="/insert_post" method="post">
+        <div>
+          <label for="title_field">Title</label>
+          <input id="title_field" type="text" name="title">
+        </div>
 
-      <dt>
-        Updated at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_board.updated_at) %> ago
-      </dd>
-    </dl>
-  </div>
+        <div>
+          <label for="body_field">Body</label>
+          <textarea name="body" id="body_field" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+          <label for="expires_on_field">Expires on</label>
+          <input type="date" id="expires_on_field" name="expires_on"></input>
+          </div>
+      </div>
+
+    </form>
+    <dt>
+      Created at
+    </dt>
+    <dd>
+      <%= time_ago_in_words(@the_board.created_at) %> ago
+    </dd>
+
+    <dt>
+      Updated at
+    </dt>
+    <dd>
+      <%= time_ago_in_words(@the_board.updated_at) %> ago
+    </dd>
+  </dl>
+</div>
 </div>
 
 <hr>
-
 
 <div>
   <div>
