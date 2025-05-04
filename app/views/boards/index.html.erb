@@ -40,7 +40,7 @@
 <%end%>
 </ul>
 
-<div>
+<!--<div>
   <div>
     <table border="1">
       <tr>
@@ -64,32 +64,32 @@
         </th>
       </tr>
 
-      <% @list_of_boards.each do |a_board| %>
-      <tr>
+      <%# @list_of_boards.each do |a_board| %>-->
+<!--      <tr>
         <td>
-          <%= a_board.id %>
-        </td>
+          <%#= a_board.id %>-->
+<!--        </td>
 
         <td>
-          <%= a_board.name %>
-        </td>
+          <%#= a_board.name %>-->
+<!--        </td>
 
         <td>
-          <%= time_ago_in_words(a_board.created_at) %> ago
-        </td>
+          <%#= time_ago_in_words(a_board.created_at) %> ago-->
+<!--        </td>
         <td>
-          <%= time_ago_in_words(a_board.updated_at) %> ago
-        </td>
+          <%#= time_ago_in_words(a_board.updated_at) %> ago-->
+<!--        </td>
 
         <td>
-          <a href="/boards/<%= a_board.id %>">
+          <a href="/boards/<%#= a_board.id %>">
             Show details
           </a>
         </td>
       </tr>
-      <% end %>
-    </table>
+      <%# end %>-->
+<!--    </table>
   </div>
-</div>
+</div>-->
 
 <hr>
